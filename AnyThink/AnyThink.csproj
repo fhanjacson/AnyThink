@@ -43,7 +43,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.1.3\lib\net45\MailKit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MimeKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.1.3\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +70,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,19 +90,92 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\ManagePost.aspx" />
+    <Content Include="App_Data\AnyThink.mdf" />
+    <Content Include="App_Data\AnyThink_log.ldf">
+      <DependentUpon>AnyThink.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assets\Images\Profile_Picture\100px\profile1.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile2.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile3.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile4.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile5.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile6.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\100px\profile7.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon1.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon2.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon3.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon4.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon5.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon6.jpg" />
+    <Content Include="Assets\Images\Profile_Picture\400px\8biticon7.jpg" />
+    <Content Include="Assets\Style_Sheets\AnyThink.css" />
+    <Content Include="Assets\Vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\Vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\Vendor\jquery\jquery-3.3.1.slim.min.js" />
+    <Content Include="Assets\Vendor\NES\nes.css" />
+    <Content Include="index.aspx" />
+    <Content Include="references.txt" />
+    <Content Include="signin.aspx" />
+    <Content Include="signup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\ManagePost.aspx.cs">
+      <DependentUpon>ManagePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagePost.aspx.designer.cs">
+      <DependentUpon>ManagePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnyThink.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Home.Master.cs">
+      <DependentUpon>User_Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Home.Master.designer.cs">
+      <DependentUpon>User_Home.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nbivN04w.woff2" />
+    <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nRivN04w.woff2" />
+    <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2" />
+    <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nWivN04w.woff2" />
+    <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2" />
     <None Include="packages.config" />
+    <Content Include="User_Home.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Database\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

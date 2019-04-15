@@ -1,0 +1,7 @@
+https://fonts.google.com/specimen/Press+Start+2P
+https://fonts.googleapis.com/css?family=Press+Start+2P
+https://nostalgic-css.github.io/NES.css/
+https://resizeimage.net/
+https://8biticon.com/
+https://www.c-sharpcorner.com/article/compute-sha256-hash-in-c-sharp/
+http://dlgt.net/c-generate-a-random-alphanumeric-string-of-random-length/
