@@ -27,7 +27,7 @@ namespace AnyThink
             int lastInsertID = -1;
             using (SqlConnection dbConnection = new SqlConnection(AnyThink.connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("Select * from Users where Username = '" + SignUpUsername.Text + "'", dbConnection))
+                using (SqlCommand cmd = new SqlCommand("Select Username from Users where Username = '" + SignUpUsername.Text + "'", dbConnection))
                 {
                     dbConnection.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
@@ -53,10 +53,10 @@ namespace AnyThink
                                 sqlCommand.Parameters.AddWithValue("@PasswordHashed", hashPassword);
                                 sqlCommand.Parameters.AddWithValue("@PasswordSalt", saltPassword);
                                 sqlCommand.Parameters.AddWithValue("@PermissionID", 3);
-                                sqlCommand.Parameters.AddWithValue("@Email", SignUpEmail.Text);
+                                sqlCommand.Parameters.AddWithValue("@Email", SignUpEmail.Text.ToLower());
                                 sqlCommand.Parameters.AddWithValue("@FullName", SignUpFullName.Text);
                                 sqlCommand.Parameters.AddWithValue("@ProfilePicture", "profile1");
-                                sqlCommand.Parameters.AddWithValue("@StatusID", 1);
+                                sqlCommand.Parameters.AddWithValue("@StatusID", 3);
                                 dbConnection.Open();
                                 sqlCommand.ExecuteNonQuery();
                                 dbConnection.Close();
@@ -78,7 +78,7 @@ namespace AnyThink
                             }
 
 
-                            query = "INSERT INTO Token (Token_Hashed, Token_Salt, User_ID, Date_Created, Date_Expired, Status_ID) VALUES (@TokenHashed, @TokenSalt, @UserID, @DateCreated, @DateExpired, @StatusID)";
+                            query = "INSERT INTO Token (Token_Hashed, Token_Salt, User_ID, Date_Created, Date_Expired, Status_ID, Service_Type) VALUES (@TokenHashed, @TokenSalt, @UserID, @DateCreated, @DateExpired, @StatusID, @ServiceType)";
                             using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
                             {
                                 string textToken = AnyThink.randStr(32);
@@ -93,6 +93,8 @@ namespace AnyThink
                                 sqlCommand.Parameters.AddWithValue("@DateCreated", TokenDateCreated);
                                 sqlCommand.Parameters.AddWithValue("@DateExpired", TokenDateExpired);
                                 sqlCommand.Parameters.AddWithValue("@StatusID", 1);
+                                sqlCommand.Parameters.AddWithValue("@ServiceType", "VerifyAccount");
+                                
                                 dbConnection.Open();
                                 sqlCommand.ExecuteNonQuery();
                                 dbConnection.Close();
@@ -106,7 +108,7 @@ namespace AnyThink
                                     Text = @"Hey " + SignUpFullName.Text + @",
 Welcome to AnyThink. Click the link below to verify your AnyThink Account!" + @"
 " + @"
-" + textToken };
+[AnyThink]/verifyaccount.aspx?username=" + SignUpUsername.Text.ToLower() + "&token=" + textToken };
 
                                 using (var mailclient = new SmtpClient())
                                 {

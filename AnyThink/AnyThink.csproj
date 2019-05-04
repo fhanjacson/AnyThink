@@ -90,6 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddPost.aspx" />
     <Content Include="Admin\ManagePost.aspx" />
     <Content Include="App_Data\AnyThink.mdf" />
     <Content Include="App_Data\AnyThink_log.ldf">
@@ -114,13 +115,31 @@
     <Content Include="Assets\Vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\Vendor\jquery\jquery-3.3.1.slim.min.js" />
     <Content Include="Assets\Vendor\NES\nes.css" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Post\Confess.aspx" />
+    <Content Include="Post\Funny.aspx" />
+    <Content Include="Post\Game.aspx" />
+    <Content Include="Post\Music.aspx" />
+    <Content Include="Post\Rant.aspx" />
+    <Content Include="Post\Top.aspx" />
     <Content Include="references.txt" />
-    <Content Include="signin.aspx" />
-    <Content Include="signup.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="SignedIn.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="SignOut.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="VerifyAccount.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPost.aspx.cs">
+      <DependentUpon>AddPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPost.aspx.designer.cs">
+      <DependentUpon>AddPost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManagePost.aspx.cs">
       <DependentUpon>ManagePost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +148,13 @@
       <DependentUpon>ManagePost.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnyThink.cs" />
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,27 +162,97 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Post\Confess.aspx.cs">
+      <DependentUpon>Confess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Confess.aspx.designer.cs">
+      <DependentUpon>Confess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post\Funny.aspx.cs">
+      <DependentUpon>Funny.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Funny.aspx.designer.cs">
+      <DependentUpon>Funny.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post\Game.aspx.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Game.aspx.designer.cs">
+      <DependentUpon>Game.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post\Music.aspx.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Music.aspx.designer.cs">
+      <DependentUpon>Music.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post\PostCategory.Master.cs">
+      <DependentUpon>PostCategory.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\PostCategory.Master.designer.cs">
+      <DependentUpon>PostCategory.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Post\Rant.aspx.cs">
+      <DependentUpon>Rant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Rant.aspx.designer.cs">
+      <DependentUpon>Rant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Post\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="signin.aspx.cs">
-      <DependentUpon>signin.aspx</DependentUpon>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="signin.aspx.designer.cs">
-      <DependentUpon>signin.aspx</DependentUpon>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="signup.aspx.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
+    <Compile Include="SignedIn.aspx.cs">
+      <DependentUpon>SignedIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="signup.aspx.designer.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
+    <Compile Include="SignedIn.aspx.designer.cs">
+      <DependentUpon>SignedIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User_Home.Master.cs">
-      <DependentUpon>User_Home.Master</DependentUpon>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User_Home.Master.designer.cs">
-      <DependentUpon>User_Home.Master</DependentUpon>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerifyAccount.aspx.cs">
+      <DependentUpon>VerifyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerifyAccount.aspx.designer.cs">
+      <DependentUpon>VerifyAccount.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -166,7 +262,7 @@
     <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nWivN04w.woff2" />
     <Content Include="Assets\Fonts\Press_Start_2P\e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2" />
     <None Include="packages.config" />
-    <Content Include="User_Home.Master" />
+    <Content Include="Post\PostCategory.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

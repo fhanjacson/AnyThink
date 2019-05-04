@@ -10,33 +10,51 @@
 namespace AnyThink {
     
     
-    public partial class index {
+    public partial class ForgotPassword {
         
         /// <summary>
-        /// FullNameNavBar control.
+        /// ForgotPasswordForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal FullNameNavBar;
+        protected global::System.Web.UI.HtmlControls.HtmlForm ForgotPasswordForm;
         
         /// <summary>
-        /// ProfileDropDownMenu control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProfileDropDownMenu;
+        protected global::System.Web.UI.WebControls.TextBox Username;
         
         /// <summary>
-        /// postContainer control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl postContainer;
+        protected global::System.Web.UI.WebControls.TextBox Email;
+        
+        /// <summary>
+        /// label_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_error;
+        
+        /// <summary>
+        /// ForgotPasswordButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ForgotPasswordButton;
     }
 }

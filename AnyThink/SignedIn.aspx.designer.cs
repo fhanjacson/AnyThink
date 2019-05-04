@@ -10,7 +10,7 @@
 namespace AnyThink {
     
     
-    public partial class index {
+    public partial class SignedIn {
         
         /// <summary>
         /// FullNameNavBar control.
@@ -20,23 +20,5 @@ namespace AnyThink {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal FullNameNavBar;
-        
-        /// <summary>
-        /// ProfileDropDownMenu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProfileDropDownMenu;
-        
-        /// <summary>
-        /// postContainer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl postContainer;
     }
 }

@@ -13,6 +13,13 @@ namespace AnyThink
         protected void Page_Load(object sender, EventArgs e)
         {
             //label_error.Visible = false;
+            if (Session != null && Session["full_name"] != null && Session["loggedin"] != null)
+            {
+                if (Session["loggedin"].ToString() == "yes")
+                {
+                    Response.Redirect("SignedIn.aspx");
+                }
+            }
         }
 
         protected void SignInButton_Click(object sender, EventArgs e)
@@ -28,7 +35,7 @@ namespace AnyThink
 
             using (SqlConnection dbConnection = new SqlConnection(AnyThink.connectionString))
             {
-                using (SqlCommand sqlCommand = new SqlCommand("Select * from Users where Username = '" + SignInUsername.Text + "' and Status_ID = 1", dbConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("Select * from Users where Username = '" + formUsername + "' and Status_ID = 1", dbConnection))
                 {
                     dbConnection.Open();
                     using (SqlDataReader reader = sqlCommand.ExecuteReader())
@@ -38,6 +45,7 @@ namespace AnyThink
                         {
                             
                             reader.Read();
+
                             dbUsername = reader["Username"].ToString();
                             dbPasswordHashed = reader["Password_Hashed"].ToString();
                             dbPasswordSalt = reader["Password_Salt"].ToString();
@@ -49,6 +57,10 @@ namespace AnyThink
                                 if (formPasswordHashed.Equals(dbPasswordHashed))
                                 {
                                     label_error.Text = "Login success";
+                                    Session["loggedin"] = "yes";
+                                    Session["full_name"] = reader["Full_name"];
+                                    Response.Redirect("index.aspx");
+
                                 }
                                 else
                                 {
@@ -63,7 +75,7 @@ namespace AnyThink
                         }
                         else
                         {
-                            label_error.Text = "Username doesnt exist";
+                            label_error.Text = "Account doesnt exist or email not verified";
                             label_error.Visible = true;
                         }
                     }

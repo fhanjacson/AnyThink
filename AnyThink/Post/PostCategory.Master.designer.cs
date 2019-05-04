@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AnyThink {
+namespace AnyThink.Post {
     
     
-    public partial class User_Home {
+    public partial class PostCategory {
         
         /// <summary>
         /// head control.
@@ -22,30 +22,30 @@ namespace AnyThink {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// SignUpForm control.
+        /// FullNameNavBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm SignUpForm;
+        protected global::System.Web.UI.WebControls.Literal FullNameNavBar;
         
         /// <summary>
-        /// SignUpButton control.
+        /// profiledropdownmenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SignUpButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profiledropdownmenu;
         
         /// <summary>
-        /// PlaceHolder_Post control.
+        /// PostContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder PlaceHolder_Post;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder PostContainer;
     }
 }
