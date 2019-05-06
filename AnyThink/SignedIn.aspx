@@ -23,9 +23,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="ProfileDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><asp:Literal ID="FullNameNavBar" runat="server"></asp:Literal></a>
-                    <div class="dropdown-menu" aria-labelledby="ProfileDropDown" id="ProfileDropDownMenu">
-                        <a class="dropdown-item" href="SignIn.aspx">Sign In</a>
-                        <a class="dropdown-item" href="SignUp.aspx">Sign Up</a>
+                    <div class="dropdown-menu" aria-labelledby="ProfileDropDown" id="ProfileDropDownMenu"  runat="server">
                     </div>
                 </li>
             </ul>
@@ -39,7 +37,8 @@
         </div>
         <div class="row my-5 py-5">
             <div class="col"></div>
-            <div class="col-auto">You've already Signed In. <a href="SignOut.aspx">Sign Out Instead?</a></div>
+            <div class="col-auto">
+                <asp:Literal ID="Message" runat="server"></asp:Literal></div>
             <div class="col"></div>
         </div>
     </div>
@@ -49,7 +48,7 @@
         }, 5000);
 
     </script>
-        <script src="Assets/Vendor/jquery/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="Assets/Vendor/jquery/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
     <script src="Assets/Vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 </body>
 </html>

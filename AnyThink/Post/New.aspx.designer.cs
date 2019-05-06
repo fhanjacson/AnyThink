@@ -10,7 +10,7 @@
 namespace AnyThink.Post {
     
     
-    public partial class Funny {
+    public partial class New {
         
         /// <summary>
         /// PostContainer control.

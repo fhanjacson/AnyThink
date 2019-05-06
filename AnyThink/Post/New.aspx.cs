@@ -8,13 +8,15 @@ using System.Web.UI.WebControls;
 
 namespace AnyThink.Post
 {
-    public partial class Rant : System.Web.UI.Page
+    public partial class New : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             using (SqlConnection dbConnection = new SqlConnection(AnyThink.connectionString))
             {
-                using (SqlCommand sqlCommand = new SqlCommand("SELECT Users.Username, Post.Content, Post.Point, Post.Date_Posted, Post.Category, Users.Profile_Picture FROM Post inner join Users on Post.User_ID = Users.User_ID where Post.Status_ID = 1 and Post.Category = 'Rant' order by Post.Date_Posted desc", dbConnection))
+                using (SqlCommand sqlCommand = new SqlCommand("SELECT Users.Username, Post.Content, Post.Point, Post.Date_Posted, Post.Category, Users.Profile_Picture FROM Post inner join Users on Post.User_ID = Users.User_ID where Post.Status_ID = 1 order by Post.Date_Posted desc", dbConnection))
                 {
                     dbConnection.Open();
                     using (SqlDataReader reader = sqlCommand.ExecuteReader())

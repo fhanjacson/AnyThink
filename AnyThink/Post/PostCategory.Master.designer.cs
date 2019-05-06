@@ -13,13 +13,22 @@ namespace AnyThink.Post {
     public partial class PostCategory {
         
         /// <summary>
-        /// head control.
+        /// HeadTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadTitle;
+        
+        /// <summary>
+        /// Head control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder Head;
         
         /// <summary>
         /// FullNameNavBar control.
@@ -31,13 +40,13 @@ namespace AnyThink.Post {
         protected global::System.Web.UI.WebControls.Literal FullNameNavBar;
         
         /// <summary>
-        /// profiledropdownmenu control.
+        /// ProfileDropDownMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profiledropdownmenu;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProfileDropDownMenu;
         
         /// <summary>
         /// PostContainer control.

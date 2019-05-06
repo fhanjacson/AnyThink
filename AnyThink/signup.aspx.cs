@@ -55,7 +55,7 @@ namespace AnyThink
                                 sqlCommand.Parameters.AddWithValue("@PermissionID", 3);
                                 sqlCommand.Parameters.AddWithValue("@Email", SignUpEmail.Text.ToLower());
                                 sqlCommand.Parameters.AddWithValue("@FullName", SignUpFullName.Text);
-                                sqlCommand.Parameters.AddWithValue("@ProfilePicture", "profile1");
+                                sqlCommand.Parameters.AddWithValue("@ProfilePicture", "avatar1");
                                 sqlCommand.Parameters.AddWithValue("@StatusID", 3);
                                 dbConnection.Open();
                                 sqlCommand.ExecuteNonQuery();

@@ -49,5 +49,7 @@
         }, 5000);
 
     </script>
+    <script src="Assets/Vendor/jquery/jquery-3.3.1.slim.min.js" type="text/javascript"></script>
+    <script src="Assets/Vendor/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 </body>
 </html>

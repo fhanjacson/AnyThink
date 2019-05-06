@@ -10,7 +10,7 @@
 namespace AnyThink {
     
     
-    public partial class addPost {
+    public partial class Profile {
         
         /// <summary>
         /// FullNameNavBar control.
@@ -31,40 +31,67 @@ namespace AnyThink {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProfileDropDownMenu;
         
         /// <summary>
-        /// AddPostForm control.
+        /// ProfilePictureDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm AddPostForm;
+        protected global::System.Web.UI.WebControls.Literal ProfilePictureDisplay;
         
         /// <summary>
-        /// Content control.
+        /// FullNameDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea Content;
+        protected global::System.Web.UI.WebControls.Literal FullNameDisplay;
         
         /// <summary>
-        /// Category control.
+        /// EmailDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Category;
+        protected global::System.Web.UI.WebControls.Literal EmailDisplay;
         
         /// <summary>
-        /// ButtonPost control.
+        /// UpdateProfileForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPost;
+        protected global::System.Web.UI.HtmlControls.HtmlForm UpdateProfileForm;
+        
+        /// <summary>
+        /// ProfilePictureSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ProfilePictureSelect;
+        
+        /// <summary>
+        /// FullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText FullName;
+        
+        /// <summary>
+        /// ButtonSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSave;
         
         /// <summary>
         /// ButtonCancel control.

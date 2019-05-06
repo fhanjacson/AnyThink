@@ -121,8 +121,10 @@
     <Content Include="Post\Funny.aspx" />
     <Content Include="Post\Game.aspx" />
     <Content Include="Post\Music.aspx" />
+    <Content Include="Post\New.aspx" />
     <Content Include="Post\Rant.aspx" />
     <Content Include="Post\Top.aspx" />
+    <Content Include="Profile.aspx" />
     <Content Include="references.txt" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="SignedIn.aspx" />
@@ -130,6 +132,7 @@
     <Content Include="SignOut.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="VerifyAccount.aspx" />
+    <Content Include="ViewPost.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +193,13 @@
     <Compile Include="Post\Music.aspx.designer.cs">
       <DependentUpon>Music.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Post\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Post\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Post\PostCategory.Master.cs">
       <DependentUpon>PostCategory.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +220,13 @@
     </Compile>
     <Compile Include="Post\Top.aspx.designer.cs">
       <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPassword.aspx.cs">
@@ -253,6 +270,13 @@
     </Compile>
     <Compile Include="VerifyAccount.aspx.designer.cs">
       <DependentUpon>VerifyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPost.aspx.cs">
+      <DependentUpon>ViewPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPost.aspx.designer.cs">
+      <DependentUpon>ViewPost.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

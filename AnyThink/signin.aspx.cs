@@ -59,6 +59,7 @@ namespace AnyThink
                                     label_error.Text = "Login success";
                                     Session["loggedin"] = "yes";
                                     Session["full_name"] = reader["Full_name"];
+                                    Session["userid"] = reader["User_ID"];
                                     Response.Redirect("index.aspx");
 
                                 }
