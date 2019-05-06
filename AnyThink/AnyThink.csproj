@@ -115,8 +115,10 @@
     <Content Include="Assets\Vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\Vendor\jquery\jquery-3.3.1.slim.min.js" />
     <Content Include="Assets\Vendor\NES\nes.css" />
+    <Content Include="EditPost.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Notice.aspx" />
     <Content Include="Post\Confess.aspx" />
     <Content Include="Post\Funny.aspx" />
     <Content Include="Post\Game.aspx" />
@@ -151,6 +153,13 @@
       <DependentUpon>ManagePost.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnyThink.cs" />
+    <Compile Include="EditPost.aspx.cs">
+      <DependentUpon>EditPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditPost.aspx.designer.cs">
+      <DependentUpon>EditPost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,6 +173,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Post\Confess.aspx.cs">
       <DependentUpon>Confess.aspx</DependentUpon>
