@@ -61,7 +61,7 @@
                     </div>
                     <asp:Button runat="server" class="btn btn-primary btn-block" ID="ButtonSave" Text="Save" OnClick="ButtonSave_Click" />
                     <asp:Button runat="server" class="btn btn-secondary btn-block" ID="ButtonCancel" Text="Cancel" OnClick="ButtonCancel_Click" />
-                    <%--<asp:Button runat="server" class="btn btn-danger btn-block" ID="ButtonDelete" Text="Delete" OnClick="ButtonDelete_Click" />--%>
+                    <asp:Button runat="server" class="btn btn-danger btn-block" ID="ButtonDelete" Text="Delete" OnClick="ButtonDelete_Click" />
                 </form>
             </div>
             <div class="col"></div>

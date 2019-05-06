@@ -21,6 +21,7 @@ namespace AnyThink
                     {
                         if (Request.QueryString["postid"] != null)
                         {
+                            FullNameNavBar.Text = Session["full_name"].ToString();
                             string postid = Request.QueryString["postid"];
                             using (SqlConnection dbConnection = new SqlConnection(AnyThink.connectionString))
                             {
@@ -102,7 +103,29 @@ namespace AnyThink
 
         protected void ButtonDelete_Click(object sender, EventArgs e)
         {
-
+            if (Session != null && Session["full_name"] != null && Session["loggedin"] != null)
+            {
+                if (Session["loggedin"].ToString() == "yes")
+                {
+                    if (Request.QueryString["postid"] != null)
+                    {
+                        System.Diagnostics.Debug.WriteLine("asd");
+                        using (SqlConnection dbConnection = new SqlConnection(AnyThink.connectionString))
+                        {
+                            string postid = Request.QueryString["postid"];
+                            var query = "Delete Post where Post_ID = @PostID";
+                            using (SqlCommand sqlCommand = new SqlCommand(query, dbConnection))
+                            {
+                                sqlCommand.Parameters.AddWithValue("@PostID", postid);
+                                dbConnection.Open();
+                                sqlCommand.ExecuteNonQuery();
+                                dbConnection.Close();
+                                Response.Redirect("Notice.aspx?head=Post%20Deleted&body=Post%20has%20been%20deleted%20successfully");
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
